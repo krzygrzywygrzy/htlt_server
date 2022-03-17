@@ -14,9 +14,7 @@ const connectToDatabase = async () => {
 
   const db: mongoDB.Db = client.db(process.env.DB_NAME);
 
-  const usersColletion: mongoDB.Collection = db.collection(
-    process.env.USERS_COLLECTION_NAME!
-  );
+  const usersColletion: mongoDB.Collection = db.collection("users");
 
   collections.users = usersColletion;
 
