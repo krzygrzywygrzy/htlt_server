@@ -8,6 +8,7 @@ const run = async () => {
 
     const port = process.env.PORT || 8080;
     const app = express();
+    app.use(express.json());
     app.use("/users", userRouter);
 
     app.get("/", (_, res: Response) => {
